@@ -1,14 +1,18 @@
 
 h1{
-    font-size: 50px;background-color: rgba(124, 239, 67, 0.779);
-    font-color:rgb(116, 116, 225);
+    background-color: rgba(124, 239, 67, 0.779);
+    color: rgb(116, 116, 225);
+    font-size: 50px;
     text-align: center ;
 }
 
 
 
-table{
-    border-style: hidden;
+table th, td {
+    border: 1px solid black;
+    border-collapse: border-collapse;
+    text-align: center;
+    padding: 10px;
 }
 tr{
     background-color: rgb(161, 228, 88);

@@ -1,11 +1,10 @@
 import sqlite3
 from flask import Flask, jsonify
-from flask import Flask
 from flask_cors import CORS
 from itsdangerous import base64_encode 
 
 def pega_conexao():
-    nome_banco ="classe"
+    nome_banco ="classe.db"
     con = sqlite3.connect(nome_banco)
     return con  
 
@@ -22,7 +21,7 @@ def todos():
     cur = con.cursor()
     #
     try:
-        cur.execute("SELECT * FROM classe")
+        cur.execute("SELECT * FROM Classe")
     except:
         con.close()
         return jsonify("erro consulta")
@@ -39,4 +38,12 @@ def lista_um(id):
      cur.execute(f"SELECT * FROM classe WHERE ID={id}")
     except:
         con.close()
+        return jsonify("Erro ao consular o banco")
+    
+    dados =  cur.fetchone()
+    con.close()
+    return jsonify(dados)
+    
+if__name__ == "__main__":
+app.run()
     
