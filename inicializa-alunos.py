@@ -4,7 +4,7 @@ if os.path.exists(nome_banco):
 
  conexao = sqlite3.connect(nome_banco)
  cursor = conexao.cursor() 
- consulta = """CREATE TABLE Alunos (
+ consulta = """CREATE TABLE Classe (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     aluno TEXT,
     etnia TEXT,

@@ -1,9 +1,9 @@
 nome_banco = "classe"
 con = sqlite3.connect(nome_banco) 
 cur = con.cursor()
-
 Classe=[
- 
+     
+     
      (None,João,branco, 17,True,True,masculino,,4,0 )
      (None,Dorival,pardo,18,True,True,masculino,,6,1 ),
      (None,Edmundo,preto,13,True,True,masculino,,3,0 ),
@@ -11,7 +11,7 @@ Classe=[
      (None,Eunice,amarelo,16,False,True,feminino,3,1),
      (None,Ana,preto,15,True,True,feminino,5,0),
      (None,Manuel,branco,13,False,False,masculino,3,0 ),
-     (None,Ramiro, amarelo,14,True,True,masculino,5,0 ),
+     (None,Ramyro, amarelo,14,True,True,masculino,5,0 ),
      (None,Joaquim,indigena,13,True,True,masculino,6,0 ) ,
      (None,Floriano,pardo,16,True, True,masculino,3.0),
      (None,Janaína,pardo,17,True,True,feminino,3,0 ),
@@ -33,9 +33,10 @@ Classe=[
      (None,Cristina, pardo,14,True,True,feminino,4,0),
      (None,Roselaine,preto,15 ,False,True,feminino,5,0)
 
-    
+     
 ] 
 
 cur.executemany("INSERT INTO alunos VALUES (?,?,?,?,?,?,?,?)",alunos)
 
 con.commit()
+con.close
