@@ -11,11 +11,25 @@ fetch('http://127.0.0.1:5000/todos')
     return resposta.json()
 })
 .then(function(listaAlunos) {
-    const tamanhoLista = ListaAlunos.lenght;
+    const tamanhoLista = listaAlunos.length;
 
- for(let index = 0; index ,tamanhoLista;index++) {
+/*
+// for (inicialização de variáveis; condição para a repetição parar; incremento das variáveis)
+
+let contador = 0;
+while (contador < 10) {
+    console.log("Fernando")
+    contador++;
+}
+
+for (let contador = 0; contador < 10; contador++) {
+    console.log("Fernando")
+}
+*/
+
+ for(let index = 0; index  < tamanhoLista; index++) {
     const linha = document.createElement('tr');
-
+    console.log("benez")
     const id = document.createElement('td');
     const aluno = document.createElement('td');
     const etnia = document.createElement('td');
@@ -45,5 +59,7 @@ fetch('http://127.0.0.1:5000/todos')
     linha.appendChild(sexo);
     linha.appendChild(familiares);
     linha.appendChild(filhos);
+
+    tabela.appendChild(linha);
  }
 })

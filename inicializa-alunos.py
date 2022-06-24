@@ -16,7 +16,7 @@ etnia TEXT,
 idade INTEGER,
 aprovados BOLEAN,
 concluiram   BOLEAN,
-sexo TEXT,,
+sexo TEXT,
 familiares  INT,
 filhos INT
 )

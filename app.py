@@ -44,6 +44,6 @@ def lista_um(id):
     con.close()
     return jsonify(dados)
     
-if__name__ == "__main__":
-app.run()
+if __name__ == "__main__":
+    app.run()
     
